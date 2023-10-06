@@ -51,12 +51,35 @@ app.get("/info", (request, response) => {
 app.post("/api/persons", (request, response) => {
   const body = request.body;
 
+  if (!body.name && !body.number) {
+    return response.status(400).json({
+      error: "name and number missing",
+    });
+  } else if (!body.name) {
+    return response.status(400).json({
+      error: "name missing",
+    });
+  } else if (!body.number) {
+    return response.status(400).json({
+      error: "number missing",
+    });
+  }
+
+  const isFound = persons.find(
+    (person) => person.name.toLowerCase() === body.name.toLowerCase()
+  );
+
+  if (isFound) {
+    return response.status(400).json({
+      error: "name already exists. name must be unique",
+    });
+  }
+
   const person = {
     name: body.name,
     number: body.number,
     id: Math.floor(Math.random() * Number.MAX_SAFE_INTEGER), // 9007199254740991
   };
-
   persons = persons.concat(person);
   response.json(person);
 });
