@@ -1,7 +1,9 @@
+const morgan = require("morgan");
 const express = require("express");
 // a function that is used to create an express application stored in the app variable
 const app = express();
 app.use(express.json());
+app.use(morgan("tiny"));
 
 let persons = [
   {

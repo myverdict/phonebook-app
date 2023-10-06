@@ -21,3 +21,9 @@ npm install express
 ```
 npm install --save-dev nodemon
 ```
+
+3. Morgan middleware
+
+```
+npm install morgan
+```
