@@ -6,7 +6,10 @@ Phonebook application - University of Helsinki (Deep Dive Into Modern Web Develo
 
 ## Part 3 - (a) Node.js and Express
 
+## Part 3 - (b) Deploying app to internet
+
 Exercises 3.1 - 3.6 --> phonebook backend
+Exercises 3.9 - 3.11 --> phonebook backend express server app (contd. from part 3a)
 
 ### Requirements for the application:
 
@@ -22,8 +25,16 @@ npm install express
 npm install --save-dev nodemon
 ```
 
-3. Morgan middleware
+3. Morgan middleware (HTTP request logger middleware for node.js)
 
 ```
 npm install morgan
 ```
+
+4. CORS middleware (Cross-Origin Resource Sharing)
+
+```
+npm install cors
+```
+
+5. Deployed on [render](https://render.com/) - Cloud Application Hosting for Developers
