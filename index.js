@@ -4,10 +4,10 @@ const cors = require("cors");
 // a function that is used to create an express application stored in the app variable
 const app = express();
 
-// https://stackoverflow.com/a/55848217/9621971
-morgan.token("body", (req, res) => JSON.stringify(req.body));
 app.use(cors());
 app.use(express.json());
+// https://stackoverflow.com/a/55848217/9621971
+morgan.token("body", (req, res) => JSON.stringify(req.body));
 app.use(morgan(":method :url :status :res[content-length] - :response-time ms :body"));
 app.use(express.static("dist"));
 
