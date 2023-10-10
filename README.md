@@ -13,7 +13,7 @@ Exercises 3.9 - 3.11 --> phonebook backend express server app (contd. from part 
 
 ### Requirements for the application:
 
-1. Express
+1. Express - Express.js, or simply Express, is a back end web application framework for building RESTful APIs with Node.js
 
 ```
 npm install express
