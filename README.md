@@ -19,7 +19,7 @@ Exercises 3.9 - 3.11 --> phonebook backend express server app (contd. from part 
 npm install express
 ```
 
-2. Nodemon
+2. Nodemon - reload, automatically
 
 ```
 npm install --save-dev nodemon
