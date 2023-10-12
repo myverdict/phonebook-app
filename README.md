@@ -6,12 +6,14 @@ Phonebook application - University of Helsinki (Deep Dive Into Modern Web Develo
 
 ## Part 3 - (a) Node.js and Express
 
+Exercises 3.1 - 3.8 --> phonebook backend express server app
+
 ## Part 3 - (b) Deploying app to internet
+
+Exercises 3.9 - 3.11 --> phonebook backend express server app (contd. from part 3a)
 
 ## Part 3 - (c) Saving data to MongoDB
 
-Exercises 3.1 - 3.6 --> phonebook backend express server app
-Exercises 3.9 - 3.11 --> phonebook backend express server app (contd. from part 3a)
 Exercises 3.12 --> phonebook backend express server app (contd. from part 3b)
 
 ### Requirements for the application:
