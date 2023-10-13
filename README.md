@@ -61,11 +61,11 @@ Exercises 3.9 - 3.11 --> phonebook backend express server app (contd. from part 
 
 phonebook backend express server app (contd. from part 3b)
 
-Exercises 3.12
+Exercises 3.12 --> Command line database
 
-Exercises 3.13 - 3.14
+Exercises 3.13 - 3.14 --> Phonebook database
 
-Exercises 3.15 - 3.18
+Exercises 3.15 - 3.18 --> Phonebook database
 
 #### Requirements for the application:
 
