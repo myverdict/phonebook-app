@@ -10,6 +10,18 @@ npm i
 
 To run the application, in the terminal run the below command:
 
+- For practice purposes:
+
+```
+node mongo.js yourpassword Anna 040-1234556
+
+node mongo.js yourpassword "Arto Vihavainen" 045-1232456
+
+node mongo.js yourpassword
+```
+
+- Actual notes application
+
 ```
 npm run dev
 ```
@@ -82,6 +94,18 @@ npm install cors
 
 https://phonebook-app-zim0.onrender.com/
 
+When the app is deployed in Render, make sure that the env variables from this project is saved in the Render web service --> Environment
+
 6. MongoDB Atlas - A MongoDB provider. Create an account (here)[https://www.mongodb.com/atlas/database] and choose the free option. (MongoDB is a document-oriented NoSQL database)
 
 7. Mongoose - Object Document Mapper library for MongoDB
+
+```
+npm install mongoose
+```
+
+8. dotenv - used for environment variables
+
+```
+npm install dotenv
+```

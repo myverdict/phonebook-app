@@ -5,11 +5,10 @@ if (process.argv.length < 3) {
   process.exit(1);
 }
 
-const password = process.argv[2];
 const name = process.argv[3] || undefined;
 const number = process.argv[4] || undefined;
 
-const uri = `mongodb+srv://phone:${password}@cluster0.slurjbk.mongodb.net/phonebookApp?retryWrites=true&w=majority`;
+const uri = process.env.MONGODB_URI;
 
 mongoose.set("strictQuery", false);
 mongoose.connect(uri);
