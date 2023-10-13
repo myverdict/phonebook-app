@@ -70,6 +70,12 @@ app.post("/api/persons", (request, response) => {
 //   response.status(204).end();
 // });
 
+app.delete("/api/persons/:id", (request, response) => {
+  Person.findByIdAndRemove(request.params.id).then((result) => {
+    response.status(204).end();
+  });
+});
+
 const unknownEndpoint = (request, response) => {
   response.status(404).send({ error: "unknown endpoint" });
 };
