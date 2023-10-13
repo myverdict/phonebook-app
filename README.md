@@ -67,6 +67,12 @@ Exercises 3.13 - 3.14 --> Phonebook database
 
 Exercises 3.15 - 3.18 --> Phonebook database
 
+### Part 3 - (d) Validation and ESLint
+
+Exercises 3.19 - 3.21 --> Phonebook database & deploying the database backend to production
+
+Exercise 3.22 --> Lint configuration
+
 #### Requirements for the application:
 
 1. Express - Express.js, or simply Express, is a back end web application framework for building RESTful APIs with Node.js

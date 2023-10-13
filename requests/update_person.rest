@@ -3,5 +3,14 @@ Content-Type: application/json
 
 {
   "name": "Peter pan",
-  "number": "789-456-123"
+  "number": "147-258963"
+}
+
+###
+PUT http://localhost:3001/api/persons/6529634791fa9f858cf0462c
+Content-Type: application/json
+
+{
+  "name": "pe",
+  "number": "147-258963"
 }

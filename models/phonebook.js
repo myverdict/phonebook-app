@@ -15,7 +15,12 @@ mongoose
   });
 
 const phonebookSchema = new mongoose.Schema({
-  name: String,
+  // mongoose validation
+  name: {
+    type: String,
+    minLength: 3,
+    required: true,
+  },
   number: String,
 });
 
