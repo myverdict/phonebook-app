@@ -1,22 +1,58 @@
 # uoh-fullstack-open-2023-part3
 
-Phonebook application - University of Helsinki (Deep Dive Into Modern Web Development, Part 3: Programming a server with NodeJS and Express)
+## Phonebook application - University of Helsinki (Deep Dive Into Modern Web Development, Part 3: Programming a server with NodeJS and Express)
+
+Install dependencies from the root of the project/application:
+
+```
+npm i
+```
+
+To run the application, in the terminal run the below command:
+
+```
+npm run dev
+```
+
+On the browser, visit:
+
+- http://localhost:3001/info
+- http://localhost:3001/api/persons
+- http://localhost:3001/api/persons/1
+
+You can also perform these operations on Postman/VS Code REST client.
 
 ---
 
-## Part 3 - (a) Node.js and Express
+REST HTTP Methods for the notes application:
+
+| URL            | verb   | functionality                                                          |
+| -------------- | ------ | ---------------------------------------------------------------------- |
+| info           | GET    | fetches the total number of entries in the collection and current date |
+| api/persons    | GET    | fetches all resources in the collection                                |
+| api/persons/1  | GET    | fetches a single resource                                              |
+| api/persons    | POST   | creates a new resource based on the request data                       |
+| /api/persons/1 | DELETE | removes the identified resource                                        |
+
+---
+
+### Part 3 - (a) Node.js and Express
 
 Exercises 3.1 - 3.8 --> phonebook backend express server app
 
-## Part 3 - (b) Deploying app to internet
+### Part 3 - (b) Deploying app to internet
 
 Exercises 3.9 - 3.11 --> phonebook backend express server app (contd. from part 3a)
 
-## Part 3 - (c) Saving data to MongoDB
+### Part 3 - (c) Saving data to MongoDB
 
-Exercises 3.12 --> phonebook backend express server app (contd. from part 3b)
+phonebook backend express server app (contd. from part 3b)
 
-### Requirements for the application:
+Exercises 3.12
+
+Exercises 3.13 - 3.14
+
+#### Requirements for the application:
 
 1. Express - Express.js, or simply Express, is a back end web application framework for building RESTful APIs with Node.js
 
