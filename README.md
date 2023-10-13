@@ -26,7 +26,7 @@ node mongo.js yourpassword
 npm run dev
 ```
 
-On the browser, visit:
+On the browser, visit for get requests for get requests:
 
 - http://localhost:3001/info
 - http://localhost:3001/api/persons
@@ -44,6 +44,7 @@ REST HTTP Methods for the notes application:
 | api/persons    | GET    | fetches all resources in the collection                                |
 | api/persons/1  | GET    | fetches a single resource                                              |
 | api/persons    | POST   | creates a new resource based on the request data                       |
+| api/persons/1  | PUT    | replaces the entire identified resource with the request data          |
 | /api/persons/1 | DELETE | removes the identified resource                                        |
 
 ---
@@ -63,6 +64,8 @@ phonebook backend express server app (contd. from part 3b)
 Exercises 3.12
 
 Exercises 3.13 - 3.14
+
+Exercises 3.15 - 3.18
 
 #### Requirements for the application:
 
