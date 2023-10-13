@@ -6,8 +6,8 @@ const Person = require("./models/phonebook");
 
 const app = express();
 
-app.use(cors()); // cors middleware
 app.use(express.json()); // json parser middleware
+app.use(cors()); // cors middleware
 // https://stackoverflow.com/a/55848217/9621971
 morgan.token("body", (req, res) => JSON.stringify(req.body)); // morgan middleware
 app.use(
@@ -71,12 +71,22 @@ app.post("/api/persons", (request, response) => {
   });
 });
 
-// app.delete("/api/persons/:id", (request, response) => {
-//   const id = Number(request.params.id);
-//   persons = persons.filter((person) => person.id !== id);
+app.put("/api/persons/:id", (request, response, next) => {
+  const body = request.body;
 
-//   response.status(204).end();
-// });
+  const person = {
+    name: body.name,
+    number: body.number,
+  };
+
+  Person.findByIdAndUpdate(request.params.id, person, { new: true })
+    .then((updatedPerson) => {
+      console.log("updated person");
+      console.log(updatedPerson);
+      response.json(updatedPerson);
+    })
+    .catch((error) => next(error));
+});
 
 app.delete("/api/persons/:id", (request, response, next) => {
   Person.findByIdAndRemove(request.params.id)
