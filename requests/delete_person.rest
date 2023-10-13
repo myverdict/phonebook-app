@@ -1,2 +1,5 @@
-DELETE http://localhost:3001/api/persons/4
+DELETE http://localhost:3001/api/persons/65295f46b7bedfa653bf9781
+
+###
+DELETE http://localhost:3001/api/persons/someInvalidId
 
