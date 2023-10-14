@@ -77,25 +77,25 @@ Exercise 3.22 --> Lint configuration
 
 1. Express - Express.js, or simply Express, is a back end web application framework for building RESTful APIs with Node.js
 
-```
+```bash
 npm install express
 ```
 
 2. Nodemon - reload, automatically
 
-```
+```bash
 npm install --save-dev nodemon
 ```
 
 3. Morgan middleware (HTTP request logger middleware for node.js)
 
-```
+```bash
 npm install morgan
 ```
 
 4. CORS middleware (Cross-Origin Resource Sharing)
 
-```
+```bash
 npm install cors
 ```
 
@@ -109,12 +109,30 @@ When the app is deployed in Render, make sure that the env variables from this p
 
 7. Mongoose - Object Document Mapper library for MongoDB
 
-```
+```bash
 npm install mongoose
 ```
 
 8. dotenv - used for environment variables
 
-```
+```bash
 npm install dotenv
+```
+
+9. ESLint - tool for static analysis (aka "linting") that detects and flags errors in programming languages, including stylistic errors
+
+```bash
+npm install eslint --save-dev
+```
+
+To initialize a default ESlint configuration:
+
+```bash
+npx eslint --init
+```
+
+or
+
+```bash
+npm init @eslint/config
 ```

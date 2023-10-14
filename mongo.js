@@ -1,7 +1,7 @@
-const mongoose = require("mongoose");
+const mongoose = require('mongoose');
 
 if (process.argv.length < 3) {
-  console.log("give password as argument");
+  console.log('give password as argument');
   process.exit(1);
 }
 
@@ -10,7 +10,7 @@ const number = process.argv[4] || undefined;
 
 const uri = process.env.MONGODB_URI;
 
-mongoose.set("strictQuery", false);
+mongoose.set('strictQuery', false);
 mongoose.connect(uri);
 
 const phonebookSchema = mongoose.Schema({
@@ -18,7 +18,7 @@ const phonebookSchema = mongoose.Schema({
   number: String,
 });
 
-const Person = mongoose.model("Person", phonebookSchema);
+const Person = mongoose.model('Person', phonebookSchema);
 
 if (name && number) {
   const person = new Person({
@@ -32,7 +32,7 @@ if (name && number) {
   });
 } else {
   Person.find({}).then((persons) => {
-    console.log("phonebook: ");
+    console.log('phonebook: ');
     persons.forEach((person) => {
       console.log(person.name, person.number);
     });

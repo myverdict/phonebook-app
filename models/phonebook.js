@@ -1,17 +1,17 @@
-require("dotenv").config();
-const mongoose = require("mongoose");
+require('dotenv').config();
+const mongoose = require('mongoose');
 
-mongoose.set("strictQuery", false);
+mongoose.set('strictQuery', false);
 
 const uri = process.env.MONGODB_URI;
 
 mongoose
   .connect(uri)
   .then((result) => {
-    console.log("connected to MongoDB");
+    console.log('connected to MongoDB');
   })
   .catch((error) => {
-    console.log("error connecting to MongoDB:", error.message);
+    console.log('error connecting to MongoDB:', error.message);
   });
 
 const phonebookSchema = new mongoose.Schema({
@@ -33,11 +33,11 @@ const phonebookSchema = new mongoose.Schema({
       message: (props) =>
         `${props.value} is NOT a valid phone number format! For e.g.:  09-1234556 or 040-22334455 are valid formats.`,
     },
-    required: [true, "User phone number required"],
+    required: [true, 'User phone number required'],
   },
 });
 
-phonebookSchema.set("toJSON", {
+phonebookSchema.set('toJSON', {
   transform: (document, returnedObject) => {
     returnedObject.id = returnedObject._id.toString();
     delete returnedObject._id;
@@ -45,4 +45,4 @@ phonebookSchema.set("toJSON", {
   },
 });
 
-module.exports = mongoose.model("Person", phonebookSchema);
+module.exports = mongoose.model('Person', phonebookSchema);
