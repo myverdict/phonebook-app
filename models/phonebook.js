@@ -27,8 +27,7 @@ const phonebookSchema = new mongoose.Schema({
     validate: {
       validator: function (v) {
         console.log({ v });
-        // return /\d{2,3}-\d+/.test(v);
-        const phoneNumberPattern = /^\d{2,3}-\d+$/;
+        const phoneNumberPattern = /^\d{2,3}-\d+$/; // 09-1234556 or 040-22334455
         return phoneNumberPattern.test(v);
       },
       message: (props) =>
