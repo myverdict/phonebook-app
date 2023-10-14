@@ -69,8 +69,12 @@ app.put('/api/persons/:id', (request, response, next) => {
     { new: true, runValidators: true, context: 'query' }
   )
     .then((updatedPerson) => {
-      console.log('updated person');
-      response.json(updatedPerson);
+      if (updatedPerson) {
+        console.log('updated person');
+        response.json(updatedPerson);
+      } else {
+        response.status(404).end();
+      }
     })
     .catch((error) => next(error));
 });
