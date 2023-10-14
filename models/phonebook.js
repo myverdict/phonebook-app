@@ -21,7 +21,21 @@ const phonebookSchema = new mongoose.Schema({
     minLength: 3,
     required: true,
   },
-  number: String,
+  number: {
+    type: String,
+    minLength: 8,
+    validate: {
+      validator: function (v) {
+        console.log({ v });
+        // return /\d{2,3}-\d+/.test(v);
+        const phoneNumberPattern = /^\d{2,3}-\d+$/;
+        return phoneNumberPattern.test(v);
+      },
+      message: (props) =>
+        `${props.value} is NOT a valid phone number format! For e.g.:  09-1234556 or 040-22334455 are valid formats.`,
+    },
+    required: [true, "User phone number required"],
+  },
 });
 
 phonebookSchema.set("toJSON", {
