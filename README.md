@@ -1,4 +1,4 @@
-# uoh-fullstack-open-2023-part3
+# uoh-fullstack-open-2024-part3
 
 ## Phonebook application - University of Helsinki (Deep Dive Into Modern Web Development, Part 3: Programming a server with NodeJS and Express)
 
@@ -24,7 +24,7 @@ node mongo.js yourpassword "Arto Vihavainen" 045-1232456
 node mongo.js yourpassword
 ```
 
-- Actual notes application:
+- Actual phonebook application:
 
 ```bash
 npm start
@@ -63,7 +63,7 @@ You can also perform these operations on Postman/VS Code REST client.
 
 ---
 
-REST HTTP Methods for the notes application:
+REST HTTP Methods for the phonebook application:
 
 | URL           | verb   | functionality                                                          |
 | ------------- | ------ | ---------------------------------------------------------------------- |
